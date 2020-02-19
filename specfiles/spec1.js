@@ -14,6 +14,11 @@ describe('protractor start', () => {
         }
       );
       expect(result.getText()).toBe('5');
+      element(by.repeater('result in memory'))
+                    .element(by.css("td:nth-child(3)"))
+                    .getText().then((text)=>{
+                      console.log(text);
+                    });
     
     
     
